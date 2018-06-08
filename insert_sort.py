@@ -28,3 +28,31 @@ originList = [3,2]
 print(insertSort(originList))
 originList = [1]
 print(insertSort(originList))
+
+
+def insert_sort(lst):
+    if len(lst) == 0 or len(lst) == 1:
+        return lst
+    else:
+        tmp = []
+        for i in lst:
+            order_in(tmp, i)
+            # print(tmp)
+        return tmp
+
+
+def order_in(lst, item):
+    if len(lst) == 0:
+        lst.append(item)
+    else:
+        for i in range(len(lst)):
+            print(lst)
+            if lst[i] > item:
+                lst.insert(i, item)
+                break
+            if i == len(lst)-1:
+                lst.append(item)
+
+
+ll = [4, 7, 3, 88, 452, 463]
+print(insert_sort(ll))
