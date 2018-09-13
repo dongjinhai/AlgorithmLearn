@@ -16,7 +16,7 @@ def heapify(origin_list,start,end):
     return origin_list
 
 def heapSort(origin_list):
-    #构建堆
+    #构建最大堆
     for i in range(len(origin_list)//2-1,-1,-1):
         origin_list = heapify(origin_list,i,len(origin_list)-1)
     #排序
